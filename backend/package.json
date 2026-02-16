@@ -1,0 +1,8 @@
+{
+  "name": "oliworks-backend",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "ts-node server.ts"
+  }
+}

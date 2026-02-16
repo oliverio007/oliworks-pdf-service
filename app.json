@@ -2,9 +2,9 @@
   "expo": {
     "name": "OliWorks",
     "slug": "OliWorks",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/oliworks-icon.png",
     "scheme": "oliworks",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,36 +13,35 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#005FEA",
+        "foregroundImage": "./assets/images/oliworks-icon.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.oliverio007.OliWorks",  
+      "versionCode": 1                        
     },
-    "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
+   "web": { "output": "single", "favicon": "./assets/images/favicon.png" }
+
+  
+,
     "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
-          "dark": {
-            "backgroundColor": "#000000"
-          }
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+  [
+    "expo-splash-screen",
+    {
+      "image": "./assets/images/splash-icon.png",
+      "imageWidth": 200,
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    }
+  ]
+]
+,
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "57322795-c524-497b-bfb1-2729528afd1d"
+      }
     }
   }
 }
