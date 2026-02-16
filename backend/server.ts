@@ -1,6 +1,6 @@
 import express from "express";
-import { parseProductionPhrase } from "../src/domain/parseProductionPhrase";
-import { applyProductionAction } from "../src/domain/applyProductionAction";
+import { parseProductionPhrase } from "./src/domain/parseProductionPhrase";
+import { applyProductionAction } from "./src/domain/applyProductionAction";
 
 const app = express();
 app.use(express.json());
@@ -38,6 +38,6 @@ app.post("/api/production-action", (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`🚀 Backend corriendo en puerto ${PORT}`);
 });
