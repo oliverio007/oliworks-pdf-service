@@ -15,7 +15,6 @@ app.post("/api/production-action", (req, res) => {
     });
   }
 
-  // 🔑 AQUÍ ESTABA EL PROBLEMA
   const action = parseProductionPhrase(phrase);
 
   if (!action) {
@@ -37,7 +36,8 @@ app.post("/api/production-action", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("🚀 SERVER A (backend) corriendo en http://localhost:3000");
+const PORT = process.env.PORT || 3000;
 
+app.listen(PORT, () => {
+  console.log(`🚀 Backend corriendo en puerto ${PORT}`);
 });
